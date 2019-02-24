@@ -1,5 +1,7 @@
 package com.tiennvph06776.bookmanager.project.activity;
 
+import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -12,7 +14,11 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.tiennvph06776.bookmanager.project.R;
 import com.tiennvph06776.bookmanager.project.fragment.FragmentIntroduce;
@@ -91,7 +97,11 @@ public class ActivityHome extends AppCompatActivity
 
             AlertDialog alertDialog = alertDialogBuilder.create();
             alertDialog.show();
-        }else if(id==R.id.nav_dangxuat){
+        }
+        else if(id==R.id.nav_change_password){
+            showDialogChangePassword();
+        }
+        else if(id==R.id.nav_dangxuat){
             finish();
         }
 
@@ -125,7 +135,28 @@ public class ActivityHome extends AppCompatActivity
         }
         ft.commit();
     }
-
+  public void showDialogChangePassword() {
+        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+        LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View dialogView = inflater.inflate(R.layout.dialog_change_password, null);
+        dialog.setView(dialogView);
+        final Dialog dialog1 = dialog.show();
+        Button doi = dialogView.findViewById(R.id.btn_edit);
+        Button huy = dialogView.findViewById(R.id.btn_cancel);
+        huy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog1.dismiss();
+            }
+        });
+      doi.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View view) {
+              Toast.makeText(ActivityHome.this, "Đổi thành công", Toast.LENGTH_SHORT).show();
+              dialog1.dismiss();
+          }
+      });
+    }
 
 
 }
