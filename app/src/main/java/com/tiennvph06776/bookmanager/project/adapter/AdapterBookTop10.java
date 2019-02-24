@@ -31,7 +31,9 @@ public class AdapterBookTop10 extends RecyclerView.Adapter<AdapterBookTop10.View
 
     @Override
     public void onBindViewHolder(@NonNull AdapterBookTop10.ViewHolder holder, int position) {
-        SelectTop10Book st = bookList.get(position);
+        final SelectTop10Book st = bookList.get(position);
+        holder.tvName.setText(st.getId());
+        holder.tvSoluong.setText(String.valueOf(st.getAmount()));
 
     }
 
