@@ -151,7 +151,7 @@ public class StatisticsDAO implements Constant {
         /*String SELECT_TOTAL_MANNY= "select "+ "SUM("+"e."+DETAIL_QUALITY+"* "+
                 "i."+BOOK_PRICE+") as TONG "+ "from "+ TABLE_BILL_DETAIL+ "as e, "+TABLE_BILL+ "as d, "+
                 TABLE_BOOK+ "as i "+ "where e."+DETAIL_BILL_ID+"=d."+B_ID+ "and e."+DETAIL_BOOK_ID+"=i."+BOOK_ID;*/
-        int total=-40000;
+        int total=0;
         String sql="select SoLuongMua*giaBia as b from BillDetail, Bill, Books where BillDetail.MaHoaDon=Bill.MaHoaDon and BillDetail.MaSach=Books.MaSach";
         SQLiteDatabase sqLiteDatabase = databaseHelper.getWritableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery(sql, null);

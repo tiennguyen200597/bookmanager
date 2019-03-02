@@ -44,9 +44,9 @@ public class LoginActivity extends AppCompatActivity implements Constant {
         double year = statisticsDAO.totalBillD(Y_YEAR);
         initViews();
         User user=new User();
-        user.username="tien1234";
-        user.password="tien1234";
-        /*userDAO.insertUser(user);*/
+        user.username="thao123";
+        user.password="thao123";
+        userDAO.insertUser(user);
 
         loginDangnhap.setOnClickListener(new View.OnClickListener() {
             @Override

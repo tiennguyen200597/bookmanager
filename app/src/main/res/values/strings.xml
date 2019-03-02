@@ -32,4 +32,10 @@
     <string name="tv_fullname">Họ và tên</string>
     <string name="tv_total">Tổng tiền:</string>
     <string name="tv_edit">Sửa</string>
+    <string name="tv_bill">Mã hóa đơn</string>
+    <string name="tv_bill_code">Mã hóa đơn</string>
+    <string name="tv_change_password">Đổi mật khẩu</string>
+    <string name="tv_old_password">Mật khẩu cũ</string>
+    <string name="tv_new_password">Mật khẩu mới</string>
+    <string name="tv_re_new_password">Nhập lại mật khẩu mới</string>
 </resources>

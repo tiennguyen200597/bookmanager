@@ -11,7 +11,6 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -31,9 +30,7 @@ import com.tiennvph06776.bookmanager.project.model.TypeBook;
 import com.tiennvph06776.bookmanager.project.sqlite.DatabaseHelper;
 import com.tiennvph06776.bookmanager.project.sqlitedao.TypeBookDAO;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class ActivityStyleBook extends AppCompatActivity{
 
@@ -120,7 +117,7 @@ public class ActivityStyleBook extends AppCompatActivity{
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.timkiem_menu, menu);
+        getMenuInflater().inflate(R.menu.search_menu, menu);
         return true;
     }
 

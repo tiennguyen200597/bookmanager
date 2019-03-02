@@ -24,7 +24,7 @@
         android:id="@+id/edMaHoaDon_HoaDon"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Mã Thể Loại"/>
+        android:hint="@string/tv_bill_code"/>
     </android.support.design.widget.TextInputLayout>
     <LinearLayout
         android:gravity="end"

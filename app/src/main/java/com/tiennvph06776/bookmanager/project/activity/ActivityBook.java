@@ -43,7 +43,6 @@ public class ActivityBook extends AppCompatActivity{
     private AdapterBook adapterBook;
     private DatabaseHelper databaseHelper;
     private BookDAO bookDAO;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,7 +59,7 @@ public class ActivityBook extends AppCompatActivity{
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        floatingActionButton = findViewById(R.id.fbtn_Sach);
+        floatingActionButton = findViewById(R.id.fbtn_book);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,7 +83,6 @@ public class ActivityBook extends AppCompatActivity{
             @Override
             public void onClick(View view, int position) {
                /* Toast.makeText(getApplicationContext(), userList.get(position).username+ " is clicked!", Toast.LENGTH_SHORT).show();*/
-
             }
 
             @Override
@@ -116,7 +114,7 @@ public class ActivityBook extends AppCompatActivity{
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.timkiem_menu, menu);
+        getMenuInflater().inflate(R.menu.search_menu, menu);
         return true;
     }
 
@@ -138,17 +136,17 @@ public class ActivityBook extends AppCompatActivity{
         final Dialog dialog1 = dialog.show();
         Button add = dialogView.findViewById(R.id.btn_add);
         Button cancel = dialogView.findViewById(R.id.btn_cancel);
-        final EditText edMaSachThemSach;
-        EditText edTenSachThemSach;
-        final Spinner spTheLoaiThemSach;
+        final EditText ed_BookID;
+        EditText ed_BookName;
+        final Spinner sp_Type_Book;
         final EditText edTacGiaThemSach;
         final EditText edNXBThemSach;
         final EditText edGiaThemSach;
         final EditText edSoluongThemSach;
 
-        edMaSachThemSach = dialogView.findViewById(R.id.edMaSach_ThemSach);
-        edTenSachThemSach = dialogView.findViewById(R.id.edTenSach_ThemSach);
-        spTheLoaiThemSach = dialogView.findViewById(R.id.spTheLoai_ThemSach);
+        ed_BookID = dialogView.findViewById(R.id.edMaSach_ThemSach);
+        ed_BookName = dialogView.findViewById(R.id.edTenSach_ThemSach);
+        sp_Type_Book = dialogView.findViewById(R.id.spTheLoai_ThemSach);
         edTacGiaThemSach = dialogView.findViewById(R.id.edTacGia_ThemSach);
         edNXBThemSach = dialogView.findViewById(R.id.edNXB_ThemSach);
         edGiaThemSach = dialogView.findViewById(R.id.edGia_ThemSach);
@@ -157,20 +155,46 @@ public class ActivityBook extends AppCompatActivity{
 
         List<TypeBook> typeBooks = new TypeBookDAO(databaseHelper).getAllTypeBooks();
         Log.e("SIZE", typeBooks.size() + "");
-        spTheLoaiThemSach.setAdapter(new AdapterTypeBookSpinner(this, typeBooks));
+        sp_Type_Book.setAdapter(new AdapterTypeBookSpinner(this, typeBooks));
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 Book book = new Book();
-                book.id = edMaSachThemSach.getText().toString().trim();
+                book.id = ed_BookID.getText().toString().trim();
                 book.author = edTacGiaThemSach.getText().toString().trim();
                 book.producer = edNXBThemSach.getText().toString().trim();
-                book.price = Long.parseLong(edGiaThemSach.getText().toString().trim());
-                book.quality = Integer.parseInt(edSoluongThemSach.getText().toString().trim());
-                book.typeID = ((TypeBook) spTheLoaiThemSach.getSelectedItem()).id;
 
+
+                book.typeID = ((TypeBook) sp_Type_Book.getSelectedItem()).id;
+                if(book.id.length()==0){
+                    ed_BookID.setError("Mã sách không được để trống");
+                    return;
+                }
+                if(book.id.length()==0){
+                    ed_BookID.setError("Mã sách không được để trống");
+                    return;
+                }
+                if(book.author.length()==0){
+                    edTacGiaThemSach.setError("Mã sách không được để trống");
+                    return;
+                }
+                if(book.producer.length()==0){
+                    ed_BookID.setError("Mã sách không được để trống");
+                    return;
+                }
+               try {
+                   book.price = Long.parseLong(edGiaThemSach.getText().toString().trim());
+
+               }catch (NumberFormatException ex){
+                   edGiaThemSach.setError("Giá phải là số");
+               }
+                try {
+                    book.quality = Integer.parseInt(edSoluongThemSach.getText().toString().trim());
+                }catch (NumberFormatException ex){
+                    edGiaThemSach.setError("Số lượng phải là số");
+                }
                 long result = bookDAO.insertBook(book);
 
                 if (result > 0) {

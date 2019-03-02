@@ -33,6 +33,7 @@
         android:layout_height="wrap_content">
 
         <EditText
+            android:inputType="textPassword"
             android:id="@+id/ed_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -44,6 +45,7 @@
         android:layout_height="wrap_content">
 
         <EditText
+            android:inputType="textPassword"
             android:id="@+id/ed_repassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -99,4 +101,6 @@
             android:textAllCaps="false"
             android:textColor="@color/white" />
     </LinearLayout>
+
+
 </LinearLayout>

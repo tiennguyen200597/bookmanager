@@ -6,26 +6,19 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-
-
 import com.tiennvph06776.bookmanager.project.R;
 import com.tiennvph06776.bookmanager.project.adapter.AdapterBookTop10;
 import com.tiennvph06776.bookmanager.project.model.Book;
 import com.tiennvph06776.bookmanager.project.model.SelectTop10Book;
 import com.tiennvph06776.bookmanager.project.sqlite.DatabaseHelper;
-import com.tiennvph06776.bookmanager.project.sqlitedao.BillDetailDAO;
+
 import com.tiennvph06776.bookmanager.project.sqlitedao.BookDAO;
-
-
-import java.util.ArrayList;
 import java.util.List;
-
 public class ActivityBookTop10 extends AppCompatActivity {
     Toolbar toolbarSachBanChay;
-    RecyclerView rvSach;
+    RecyclerView recyclerView;
     private List<SelectTop10Book> bookList;
     private AdapterBookTop10 adapter;
     private DatabaseHelper databaseHelper;
@@ -45,24 +38,16 @@ public class ActivityBookTop10 extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         toolbarSachBanChay.setTitleTextColor(Color.WHITE);
         toolbarSachBanChay.setTitle("Top 10 Sách Bán Chạy");
-       /* toolbarSachBanChay.setNavigationIcon(R.drawable.undo);*/
-        spinnerThang = findViewById(R.id.spThang);
+      /*  spinnerThang = findViewById(R.id.spThang);
         ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, thang);
-        spinnerThang.setAdapter(adapter1);
-
-        /*toolbarSachBanChay.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });*/
+        spinnerThang.setAdapter(adapter1);*/
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        rvSach = findViewById(R.id.RecyclerView_SachBanChay);
+        recyclerView = findViewById(R.id.RecyclerView_SachBanChay);
         bookList = bookDAO.getTop10Books();
         adapter = new AdapterBookTop10(bookList);
-        rvSach.setAdapter(adapter);
+        recyclerView.setAdapter(adapter);
         RecyclerView.LayoutManager manager = new LinearLayoutManager(this);
-        rvSach.setLayoutManager(manager);
+        recyclerView.setLayoutManager(manager);
     }
 
 }

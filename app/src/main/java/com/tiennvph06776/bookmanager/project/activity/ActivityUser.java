@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Color;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -45,10 +46,18 @@ public class ActivityUser extends AppCompatActivity{
 
         databaseHelper = new DatabaseHelper(this);
         userDAO = new UserDAO(databaseHelper);
-
+        FloatingActionButton floatingActionButton;
         toolbarNguoiDung = findViewById(R.id.toolbarNguoiDung);
         setSupportActionBar(toolbarNguoiDung);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        floatingActionButton = findViewById(R.id.fbtn_user);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDialogAddUser();
+            }
+        });
         toolbarNguoiDung.setTitleTextColor(Color.WHITE);
         toolbarNguoiDung.setTitle(getString(R.string.title_list_user_act));
 
@@ -107,7 +116,7 @@ public class ActivityUser extends AppCompatActivity{
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_add:
-                showDialogAddUser();
+                /*showDialogAddUser();*/
                 break;
             /*case R.id.doiMatKhau:
                 showDialogDoiMatKhau();
@@ -119,7 +128,7 @@ public class ActivityUser extends AppCompatActivity{
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_add, menu);
+        getMenuInflater().inflate(R.menu.search_menu, menu);
         return true;
     }
 

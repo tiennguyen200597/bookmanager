@@ -469,7 +469,6 @@ color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
 color background_material_light
-color blue
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -503,6 +502,7 @@ color dim_foreground_material_light
 color error_color_material
 color foreground_material_dark
 color foreground_material_light
+color green
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color material_blue_grey_800
@@ -876,7 +876,6 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
-id addNguoiDung
 id alertTitle
 id all
 id always
@@ -887,11 +886,9 @@ id beginning
 id blocking
 id bottom
 id btnChonNgay
-id btnDoi_Doimatkhau
 id btnHuyTimHoaDon
 id btnHuyTimSach
 id btnHuyTimTheLoai
-id btnHuy_Doimatkhau
 id btnHuy_EditTheLoai
 id btnHuy_HoaDonChiTiet
 id btnHuy_ThemHoaDon
@@ -933,7 +930,6 @@ id design_navigation_view
 id dimensions
 id direct
 id disableHome
-id doiMatKhau
 id drawer_layout
 id edGia_EditSach
 id edGia_ThemSach
@@ -946,9 +942,9 @@ id edMota_EditTheLoai
 id edNXB_EditSach
 id edNXB_ThemSach
 id edPassWord
-id edPassWordNew2_DoiMatKhau
-id edPassWordNew_DoiMatKhau
-id edPassWordOld_DoiMatKhau
+id edPassWordNew
+id edPassWordNew2
+id edPassWordOld
 id edSoluong_EditSach
 id edSoluong_ThemSach
 id edTacGia_EditSach
@@ -978,8 +974,9 @@ id expand_activities_button
 id expanded_menu
 id fbtn_HoaDon
 id fbtn_HoaDonChiTiet
-id fbtn_Sach
 id fbtn_TheLoai
+id fbtn_book
+id fbtn_user
 id fill
 id fill_horizontal
 id fill_vertical
@@ -1028,6 +1025,7 @@ id middle
 id mini
 id multiply
 id nav_back
+id nav_change_password
 id nav_dangxuat
 id nav_gioithieu
 id nav_menu
@@ -1085,7 +1083,6 @@ id snackbar_action
 id snackbar_text
 id snap
 id spBookID
-id spThang
 id spTheLoai_EditSach
 id spTheLoai_ThemSach
 id spacer
@@ -1236,8 +1233,8 @@ layout fragment_menu
 layout item_bill
 layout item_bill_detail
 layout item_book
-layout item_sachbanchay
 layout item_style_book
+layout item_top10book
 layout item_user
 layout nav_header_home
 layout notification_action
@@ -1262,9 +1259,8 @@ layout support_simple_spinner_dropdown_item
 layout type_book_spinner
 menu activity_home_drawer
 menu menu_add
-menu nguoidung_menu
 menu poupup_menu
-menu timkiem_menu
+menu search_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 string abc_action_bar_home_description
@@ -1323,7 +1319,10 @@ string title_activity_home
 string title_list_user_act
 string tv_add
 string tv_add_style_book
+string tv_bill
+string tv_bill_code
 string tv_cancel
+string tv_change_password
 string tv_edit
 string tv_edit_info
 string tv_email
@@ -1331,8 +1330,11 @@ string tv_fogot_password
 string tv_fullname
 string tv_login
 string tv_mes
+string tv_new_password
 string tv_notify_acc
+string tv_old_password
 string tv_phone_number
+string tv_re_new_password
 string tv_save_password
 string tv_total
 string tv_wel

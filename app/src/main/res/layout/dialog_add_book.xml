@@ -82,6 +82,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <EditText
+            android:inputType="number"
             android:id="@+id/edGia_ThemSach"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -91,6 +92,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <EditText
+            android:inputType="number"
             android:id="@+id/edSoluong_ThemSach"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

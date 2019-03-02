@@ -55,9 +55,8 @@ public class BookDAO implements Constant {
     }
 
     public long delBook(String id) {
-
         SQLiteDatabase sqLiteDatabase = databaseHelper.getWritableDatabase();
-        long result = sqLiteDatabase.delete(TABLE_BILL, BOOK_ID + "=?", new String[]{id});
+        long result = sqLiteDatabase.delete(TABLE_BOOK, BOOK_ID + "=?", new String[]{id});
         sqLiteDatabase.close();
         return result;
     }
@@ -131,7 +130,7 @@ public class BookDAO implements Constant {
         List<SelectTop10Book> selectTop10Books = new ArrayList<>();
 
         SQLiteDatabase sqLiteDatabase = databaseHelper.getWritableDatabase();
-        Cursor cursor = sqLiteDatabase.rawQuery("select Books.MaSach as e, SUM(BillDetail.SoLuongMua) as i from BillDetail, Bill, Books where BillDetail.MaHoaDon=Bill.MaHoaDon and BillDetail.MaSach=Books.MaSach group by Books.MaSach order by SUM(BillDetail.SoLuongMua) LIMIT 10",
+        Cursor cursor = sqLiteDatabase.rawQuery("select Books.MaSach as e, SUM(BillDetail.SoLuongMua) as i from BillDetail, Bill, Books where BillDetail.MaHoaDon=Bill.MaHoaDon and BillDetail.MaSach=Books.MaSach group by Books.MaSach order by SUM(BillDetail.SoLuongMua) desc LIMIT 10",
                 null);
 
         if (cursor != null && cursor.getCount() > 0) {
@@ -140,7 +139,6 @@ public class BookDAO implements Constant {
                 String id = cursor.getString(cursor.getColumnIndex("e"));
                 int amount = cursor.getInt(cursor.getColumnIndex("i"));
                 SelectTop10Book book = new SelectTop10Book();
-
                 book.setId(id);
                 book.setAmount(amount);
 
