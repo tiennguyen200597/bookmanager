@@ -21,87 +21,10 @@ public class StatisticsDAO implements Constant {
         this.databaseHelper = databaseHelper;
     }
 
-
-
-    public long getStatisticsByDayCach1(long day) {
-        long result = -1;
-        List<Bill> bills = new ArrayList<>();
-
-        SQLiteDatabase sqLiteDatabase = databaseHelper.getWritableDatabase();
-
-        String SELECT_ = "SELECT * FROM " + TABLE_BILL;
-
-        Cursor cursor = sqLiteDatabase.rawQuery(SELECT_, null);
-
-        if (cursor != null) {
-            if (cursor.getCount() > 0) {
-                do {
-                    String id = cursor.getString(cursor.getColumnIndex(B_ID));
-                    long date = cursor.getLong(cursor.getColumnIndex(B_DATE));
-
-                    Bill bill = new Bill(id, date);
-
-                    bills.add(bill);
-
-                } while (cursor.moveToNext());
-
-            }
-        }
-
-        // loai bo cac ngay
-        for (int i = 0; i < bills.size(); i++) {
-
-            long date = bills.get(i).date;
-            if (date != day) {
-                bills.remove(i);
-            }
-
-        }
-
-        List<BillDetail> x = new ArrayList<>();
-        for (int i = 0; i < bills.size(); i++) {
-            List<BillDetail> billDetails_ =
-                    new BillDetailDAO(databaseHelper).getAllBillDetailByBillID(bills.get(i).id);
-
-            // lay toan bo danh sach Bill Detail theo Bill ID
-            x.addAll(billDetails_);
-
-        }
-
-        for (int i = 0; i < x.size(); i++) {
-
-            int quality = x.get(i).quality;
-            long price = new BookDAO(databaseHelper).getBookByID(x.get(i).bookID).price;
-
-            long sum_ = quality * price;
-
-            result = result + sum_;
-
-        }
-
-        return result;
-    }
-
-    // example day = 2018-10-09   YY-MM-DD
-
-    public long getStatisticsByDayCach2(String day) {
-        long result = -1;
-        SQLiteDatabase sqLiteDatabase = databaseHelper.getWritableDatabase();
-
-        String SELECT_STATISTICS_BY_DAY = "";
-
-        return result;
-
-    }
-
-
-    // format month : %Y-%m  2018-10
-
     public long getStatisticsByMonth(String month) {
         long result = -1;
 
         SQLiteDatabase sqLiteDatabase = databaseHelper.getWritableDatabase();
-
 
         String SELECT_STATISTICS = "SELECT * FROM " + TABLE_BILL + " WHERE strftime('%Y-%m', " + B_DATE + ")  = '" + month + "'";
         Cursor cursor = sqLiteDatabase.rawQuery(SELECT_STATISTICS, null);
@@ -165,6 +88,7 @@ public class StatisticsDAO implements Constant {
             } while (cursor.moveToNext());
 
         }
+        double v= total;
         return total;
     }
 

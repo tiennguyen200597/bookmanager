@@ -30,6 +30,10 @@
             android:name="com.tiennvph06776.bookmanager.project.activity.LoginActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:name="com.tiennvph06776.bookmanager.project.activity.RegisterActivity"
+            android:parentActivityName="com.tiennvph06776.bookmanager.project.activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name="com.tiennvph06776.bookmanager.project.activity.ActivityHome"
             android:label="@string/title_activity_home"
             android:screenOrientation="portrait"

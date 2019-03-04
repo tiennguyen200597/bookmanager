@@ -47,7 +47,7 @@ public class AdapterTypeBookSpinner extends BaseAdapter {
         view = LayoutInflater.from(context).inflate(R.layout.type_book_spinner, viewGroup, false);
         TextView tvName;
         tvName = view.findViewById(R.id.tvName);
-        tvName.setText(i + "|" + typeBooks.get(i).name);
+        tvName.setText(i+1 + " " + typeBooks.get(i).name);
         return view;
     }
 

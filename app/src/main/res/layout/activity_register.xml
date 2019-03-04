@@ -122,9 +122,6 @@
                     android:text="@string/tv_agree"
                     android:layout_weight="1"
                     />-->
-
-
-
             </LinearLayout>
             <Button
                 android:id="@+id/btn_Creat"

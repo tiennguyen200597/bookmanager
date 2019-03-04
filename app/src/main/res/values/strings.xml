@@ -38,4 +38,29 @@
     <string name="tv_old_password">Mật khẩu cũ</string>
     <string name="tv_new_password">Mật khẩu mới</string>
     <string name="tv_re_new_password">Nhập lại mật khẩu mới</string>
+    <string name="tv_creact">Tạo tài khoản mới?</string>
+    <!--ActivityCreat-->
+    <string name="prompt_email">Tài khoản</string>
+    <string name="prompt_password">Mật khẩu</string>
+    <string name="action_sign_in">Đăng nhập</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email</string>
+    <!--List activity -->
+    <string name="tv_user">Người dùng</string>
+    <string name="title_activity_list">ListActivity</string>
+    <string name="tv_welcom">Xin Chào!</string>
+    <string name="tv_tile">Vui lòng nhập đầy đủ thông tin.</string>
+    <string name="tv_rememberpass">Lưu mật khẩu</string>
+    <string name="tv_forgotpass">Quên mật khẩu?</string>
+    <string name="tv_notuser">Bạn chưa có tài khoản ?   Đăng kí</string>
+    <string name="title_activity_register">Register</string>
+    <string name="tv_register">Đăng ký</string>
+    <string name="re_password">Nhập lại mật khẩu</string>
+    <string name="tv_agree">Tôi đồng ý với các điều khoản</string>
+    <string name="tv_haveuser">Bạn đã có tài khoản ?   Đăng nhập</string>
+    <string name="title_activity_forget_user">Quên mật khẩu</string>
 </resources>

@@ -51,7 +51,7 @@
                     android:drawablePadding="20dp"
                     android:hint="User Name"
                     android:imeOptions="actionNext"
-                    android:text="thao123"
+                    android:text="admin123"
                     android:textSize="15dp" />
             </android.support.design.widget.TextInputLayout>
 
@@ -71,7 +71,7 @@
                     android:hint="Pass Word"
                     android:imeOptions="actionDone"
                     android:inputType="textPassword"
-                    android:text="thao123"
+                    android:text="admin123"
                     android:textSize="15dp" />
             </android.support.design.widget.TextInputLayout>
 
@@ -95,11 +95,9 @@
                 android:layout_height="276dp"
                 android:gravity="end"
                 android:orientation="vertical"
-
                 >
-
                 <Button
-                    android:id="@+id/login_dangnhap"
+                    android:id="@+id/btn_login"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginBottom="3dp"
@@ -110,8 +108,16 @@
                     android:paddingBottom="5dp"
                     android:text="@string/tv_login"
                     android:textAllCaps="false" />
+                <TextView
+                    android:id="@+id/tv_creat"
+                    android:paddingTop="50dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_creact"/>
 
             </LinearLayout>
+
         </LinearLayout>
 
 </RelativeLayout>
