@@ -2,84 +2,79 @@
 <instant-run
     abi="x86"
     api-level="28"
-    build-mode="HOT_WARM"
+    build-mode="FULL"
     density="420dpi"
     format="10"
     plugin-version="3.3.0"
-    timestamp="1551713505175"
+    timestamp="1551770101809"
     token="3095760916733609163"
-    verifier="COMPATIBLE" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="853" />
+        duration="0" />
     <task
         name="instant-run-dex"
-        duration="95" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="62" />
+        duration="0" />
     <task
         name="verifier"
-        duration="6" />
+        duration="0" />
 
     <artifact
-        location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\reload-dex\debug\classes.dex"
-        type="RELOAD_DEX" />
+        location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+        type="SPLIT" />
+    <artifact
+        location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+        type="SPLIT" />
+    <artifact
+        location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+        type="SPLIT" />
+    <artifact
+        location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+        type="SPLIT" />
+    <artifact
+        location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+        type="SPLIT" />
+    <artifact
+        location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+        type="SPLIT" />
+    <artifact
+        location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+        type="SPLIT" />
+    <artifact
+        location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
+        type="SPLIT" />
+    <artifact
+        location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+        type="SPLIT" />
+    <artifact
+        location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+        type="SPLIT" />
+    <artifact
+        location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+        type="SPLIT" />
+    <artifact
+        location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+        type="SPLIT" />
+    <artifact
+        location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1551709183991"
-        verifier="MANIFEST_FILE_CHANGE" >
+        timestamp="1551770101809"
+        verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
         <artifact
             location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1551709367148"
-        verifier="MANIFEST_FILE_CHANGE" >
-        <artifact
-            location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
             location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
@@ -88,58 +83,29 @@
             location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
+            location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
+            type="SPLIT" />
+        <artifact
             location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
             location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-            type="SPLIT" />
-        <artifact
             location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1551711758936"
-        verifier="CLASS_ADDED" >
-        <artifact
-            location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-            type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1551713029293"
-        verifier="METHOD_DELETED" >
-        <artifact
-            location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-            type="SPLIT" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1551713471713"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\builds\debug\1551713471713\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        build-mode="HOT_WARM"
-        timestamp="1551713505175"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="D:\ki4\androi_projectdemo\bookmanager\app\build\intermediates\reload-dex\debug\classes.dex"
-            type="RELOAD_DEX" />
     </build>
 
 </instant-run>
